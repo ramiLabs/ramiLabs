@@ -3,6 +3,10 @@ local bind = vim.keymap.set
 -- set leader
 bind({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- faster ins-completion
+bind("i", '<C-n>', '<C-x><C-n>', opts);
+bind("i", '<C-l>', '<C-x><C-l>', opts);
+bind("i", '<C-o>', '<C-x><C-o>', opts);
 
 -- Project Navigation
 bind("n", "<leader>e", "<cmd>Ex<CR>", opts)
@@ -84,10 +88,10 @@ bind('n', '<C-Down>', '<C-W>J', opts)
 bind('n', '<C-Up>', '<C-W>K', opts)
 bind('n', '<C-Right>', '<C-W>L', opts)
 bind('n', '<C-Left>', '<C-W>H', opts)
-bind('i', '<C-j>', '<Esc><C-W>j', opts)
-bind('i', '<C-k>', '<Esc><C-W>k', opts)
-bind('i', '<C-l>', '<Esc><C-W>l', opts)
-bind('i', '<C-h>', '<Esc><C-W>h', opts)
+--bind('i', '<C-j>', '<Esc><C-W>j', opts)
+--bind('i', '<C-k>', '<Esc><C-W>k', opts)
+--bind('i', '<C-l>', '<Esc><C-W>l', opts)
+--bind('i', '<C-h>', '<Esc><C-W>h', opts)
 bind('t', '<C-j>', '<C-\\><C-n><C-W><C-J>', opts)
 bind('t', '<C-k>', '<C-\\><C-n><C-W><C-K>', opts)
 bind('t', '<C-l>', '<C-\\><C-n><C-W><C-L>', opts)
