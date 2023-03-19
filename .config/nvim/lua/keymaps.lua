@@ -7,6 +7,7 @@ bind({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 bind("i", '<C-n>', '<C-x><C-n>', opts);
 bind("i", '<C-l>', '<C-x><C-l>', opts);
 bind("i", '<C-o>', '<C-x><C-o>', opts);
+bind("i", '<C-f>', '<C-x><C-f>', opts);
 
 -- Project Navigation
 bind("n", "<leader>e", "<cmd>Ex<CR>", opts)

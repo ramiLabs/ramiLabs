@@ -5,6 +5,7 @@ if not ok then
 end
 local lua_lsp = lsp_conf.lua_ls
 local rust_lsp = lsp_conf.rust_analyzer
+local terraform_lsp = lsp_conf.terraformls
 
 --  LSP_CONF
 -- ---------------------------------------------------
@@ -33,6 +34,9 @@ lua_lsp.setup({
     }
 })
 rust_lsp.setup({
+    on_attach = general_on_attach
+})
+terraform_lsp.setup({
     on_attach = general_on_attach
 })
 

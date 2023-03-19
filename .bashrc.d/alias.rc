@@ -9,3 +9,6 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias vim='nvim'
+
+alias cargoq='cargo run --quiet'
+alias cx='RUSTFLAGS="--emit asm" cargo build --target e86_64-apple-darwin'
