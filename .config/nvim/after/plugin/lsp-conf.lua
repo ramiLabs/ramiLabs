@@ -6,6 +6,7 @@ end
 local lua_lsp = lsp_conf.lua_ls
 local rust_lsp = lsp_conf.rust_analyzer
 local terraform_lsp = lsp_conf.terraformls
+local clangd_lsp = lsp_conf.clangd
 
 --  LSP_CONF
 -- ---------------------------------------------------
@@ -40,3 +41,6 @@ terraform_lsp.setup({
     on_attach = general_on_attach
 })
 
+clangd_lsp.setup({
+    on_attach = general_on_attach,
+})

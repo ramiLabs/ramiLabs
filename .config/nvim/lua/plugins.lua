@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
     use {'nvim-telescope/telescope.nvim', branch = '0.1.x'}
     use {'projekt0n/github-nvim-theme', branch = 'main'}
     use {'srcery-colors/srcery-vim', as = 'srcery'}
+    use {'nyoom-engineering/oxocarbon.nvim'}
     ----------------------------------
     use {
         'nvim-treesitter/nvim-treesitter',
