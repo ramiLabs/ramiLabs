@@ -5,8 +5,10 @@ bind({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- faster ins-completion
 bind("i", '<C-n>', '<C-x><C-n>', opts);
-bind("i", '<C-l>', '<C-x><C-l>', opts);
-bind("i", '<C-o>', '<C-x><C-o>', opts);
+bind("i", '<C-j>', '<Down>', opts);
+bind("i", '<C-k>', '<Up>', opts);
+bind("i", '<C-l>', '<Right>', opts);
+bind("i", '<C-h>', '<Left>', opts);
 bind("i", '<C-f>', '<C-x><C-f>', opts);
 
 -- Project Navigation

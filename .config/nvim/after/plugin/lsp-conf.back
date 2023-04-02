@@ -1,4 +1,6 @@
 local ok, lsp_conf = pcall(require,"lspconfig")
+local cmp_lsp = require('cmp_nvim_lsp')
+local cmp = require('cmp')
 if not ok then
     print("cannot find lsp_conf")
     return
@@ -7,13 +9,14 @@ local lua_lsp = lsp_conf.lua_ls
 local rust_lsp = lsp_conf.rust_analyzer
 local terraform_lsp = lsp_conf.terraformls
 local clangd_lsp = lsp_conf.clangd
+local go_lsp = lsp_conf.gopls
 
 --  LSP_CONF
 -- ---------------------------------------------------
 -- ---------------------------------------------------
 local general_on_attach = function()
     local opts = { noremap = true, silent = true, buffer=0 } -- activate mapping only for the current buffer
-    vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc') -- I_<c-x><c-o>
+    --vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc') -- I_<c-x><c-o>
     vim.keymap.set("n","K", vim.lsp.buf.hover, opts)
     vim.keymap.set("n","<leader>gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n","<leader>gt", function() vim.lsp.buf.type_definition() end, opts)
@@ -23,6 +26,23 @@ local general_on_attach = function()
     vim.keymap.set("n","<leader>ca", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n","<leader>gd", function() vim.diagnostic.open_float() end, opts)
 end
+---- CMP ----
+capabilities = cmp_lsp.default_capabilities()
+cmp.setup({
+    snippet = {
+        expand = function(args)
+        end,
+    },
+    mapping = cmp.mapping.preset.insert {
+    },
+    sources = {
+        { name = 'nvim_lsp' },
+    },
+    completion = {
+        completeopt = 'menu,insert'
+    }
+})
+---- CMP ----
 lua_lsp.setup({
     on_attach = general_on_attach,
     settings = {
@@ -35,12 +55,17 @@ lua_lsp.setup({
     }
 })
 rust_lsp.setup({
-    on_attach = general_on_attach
+    on_attach = general_on_attach,
+    capabilities = capabilities
 })
 terraform_lsp.setup({
     on_attach = general_on_attach
 })
 
 clangd_lsp.setup({
+    on_attach = general_on_attach,
+})
+
+go_lsp.setup({
     on_attach = general_on_attach,
 })

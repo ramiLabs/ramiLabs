@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
     use {'nvim-telescope/telescope.nvim', branch = '0.1.x'}
     use {'projekt0n/github-nvim-theme', branch = 'main'}
     use {'srcery-colors/srcery-vim', as = 'srcery'}
+    use 'ofirgall/ofirkai.nvim'
     use {'nyoom-engineering/oxocarbon.nvim'}
     ----------------------------------
     use {
@@ -32,9 +33,32 @@ return require('packer').startup(function(use)
         }
     }
     use 'simrat39/symbols-outline.nvim'
-    use {'neovim/nvim-lspconfig'}
     use {'TimUntersberger/neogit'}
     use {'sindrets/diffview.nvim'}
+
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
+        requires = {
+        -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
+              'williamboman/mason.nvim',
+              run = function()
+                pcall(vim.cmd, 'MasonUpdate')
+              end,
+            },
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+        }
+    }
+    --use {'neovim/nvim-lspconfig'}
+    --use {'hrsh7th/cmp-nvim-lsp'}
+    --use {'hrsh7th/nvim-cmp'}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
