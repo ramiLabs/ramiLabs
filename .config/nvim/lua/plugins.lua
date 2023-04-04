@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
     use {'projekt0n/github-nvim-theme', branch = 'main'}
     use {'srcery-colors/srcery-vim', as = 'srcery'}
     use 'ofirgall/ofirkai.nvim'
+    use "blazkowolf/gruber-darker.nvim"
     use {'nyoom-engineering/oxocarbon.nvim'}
     ----------------------------------
     use {
@@ -27,10 +28,14 @@ return require('packer').startup(function(use)
       "nvim-neo-tree/neo-tree.nvim",
         branch = "v2.x",
         requires = {
-          "nvim-lua/plenary.nvim",
-          "nvim-tree/nvim-web-devicons",
-          "MunifTanjim/nui.nvim",
-        }
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "MunifTanjim/nui.nvim",
+            "s1n7ax/nvim-window-picker",
+        },
+        config = function()
+            require('window-picker').setup()
+        end,
     }
     use 'simrat39/symbols-outline.nvim'
     use {'TimUntersberger/neogit'}
