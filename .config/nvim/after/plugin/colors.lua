@@ -3,4 +3,4 @@
     custom_hlgroups = {},
     remove_italics = true
 }--]]
-vim.cmd.colorscheme "oxocarbon"
+vim.cmd.colorscheme "simple"
