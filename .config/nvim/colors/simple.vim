@@ -69,11 +69,11 @@ let s:special    = { "fg": s:white }
 let s:operator   = { "fg": s:white }
 let s:comment    = { "fg": s:brown }
 let s:preproc    = { "fg": s:cyan }
-let s:keyword    = { "fg": s:red, "style": "bold" }
-let s:type       = { "fg": s:yellow }
+let s:keyword    = { "fg": s:red}
+let s:type       = { "fg": s:magenta }
 let s:function   = { "fg": s:green }
-let s:literal    = { "fg": s:magenta }
-let s:string     = { "fg": s:blue }
+let s:literal    = { "fg": s:yellow }
+let s:string     = { "fg": s:yellow }
 let s:char       = { "fg": s:cyan }
 let s:info       = { "style": "italic" }
 
