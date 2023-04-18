@@ -14,11 +14,11 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use {'nvim-telescope/telescope.nvim', branch = '0.1.x'}
-    use 'echasnovski/mini.cursorword'
     use {'projekt0n/github-nvim-theme', branch = 'main'}
     use {'srcery-colors/srcery-vim', as = 'srcery'}
     use 'ofirgall/ofirkai.nvim'
     use "blazkowolf/gruber-darker.nvim"
+    use 'osyo-manga/vim-brightest'
     use {'nyoom-engineering/oxocarbon.nvim'}
     ----------------------------------
     use {

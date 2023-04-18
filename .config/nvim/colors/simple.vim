@@ -5,7 +5,7 @@ if exists("syntax_on")
 endif
 
 set background=dark
-let g:colors_name = "gruber"
+let g:colors_name = "simpleRami"
 
 " Colors
 let s:black      = ["#1c1c1c", "234"]
@@ -13,6 +13,7 @@ let s:lightblack = ["#262626", "235"]
 let s:darkgray   = ["#444444", "238"]
 let s:gray       = ["#626262", "241"]
 let s:white      = ["#e4e4e4", "254"]
+let s:violet     = ["#fc33ff", "200"]
 
 let s:red     = ["#ff5f5f", "203"]
 let s:green   = ["#87d75f", "113"]
@@ -161,7 +162,7 @@ call s:hl("GitSignsChange", { "fg": s:blue })
 call s:hl("ModeMsg",        { "style": "bold" })
 call s:hl("MsgSeparator",   { "fg": s:gray })
 call s:hl("ErrorMsg",       { "fg": s:red })
-call s:hl("WarningMsg",     { "fg": s:yellow })
+call s:hl("WarningMsg",     { "fg": s:violet })
 call s:hl("MoreMsg",        { "fg": s:green })
 call s:hl("Question",       { "fg": s:green })
 
