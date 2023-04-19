@@ -68,12 +68,12 @@ let s:identifier = { "fg": s:white }
 let s:special    = { "fg": s:white }
 let s:operator   = { "fg": s:white }
 let s:comment    = { "fg": s:brown }
-let s:preproc    = { "fg": s:cyan }
+let s:preproc    = { "fg": s:green }
 let s:keyword    = { "fg": s:red}
 let s:type       = { "fg": s:magenta }
-let s:function   = { "fg": s:green }
-let s:literal    = { "fg": s:yellow }
-let s:string     = { "fg": s:yellow }
+let s:function   = { "fg": s:yellow }
+let s:literal    = { "fg": s:cyan }
+let s:string     = { "fg": s:cyan }
 let s:char       = { "fg": s:cyan }
 let s:info       = { "style": "italic" }
 
