@@ -4,7 +4,8 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'rust_analyzer',
-  'gopls'
+  'gopls',
+  'terraformls'
 })
 
 local cmp = require('cmp')
