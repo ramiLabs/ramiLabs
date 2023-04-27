@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
     use {'projekt0n/github-nvim-theme', branch = 'main'}
     use {'srcery-colors/srcery-vim', as = 'srcery'}
     use 'osyo-manga/vim-brightest'
+    use {"akinsho/toggleterm.nvim", tag = '*' }
     ----------------------------------
     use {
         'nvim-treesitter/nvim-treesitter',
