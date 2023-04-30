@@ -14,9 +14,6 @@ bind("i", '<C-f>', '<C-x><C-f>', opts);
 -- Project Navigation
 bind("n", "<leader>e", "<cmd>Ex<CR>", opts)
 
--- reload lua file
-bind('n', '<leader>so', ':luafile %<CR>', opts)
-
 bind('n', 'x', '"_x', opts) -- delete without putting in register
 bind('n','<leader>d', '"_d', opts) -- Delete into void don't put in register
 bind('v','<leader>d', '"_d', opts)
@@ -71,8 +68,8 @@ bind("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 bind("n", "<leader>X", "<cmd>!chmod +x %<CR>", opts)
 
 -- Split window
-bind('n', 'sS', ':split<CR>', { silent = true })
-bind('n', 'ss', ':vsplit<CR>', { silent = true })
+bind('n', '<leader>S', ':split<CR>', { silent = true })
+bind('n', '<leader>s', ':vsplit<CR>', { silent = true })
 
 -- Resize window
 bind('n', '<C-S-Left>', '10<C-w><', opts)
