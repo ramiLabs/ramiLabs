@@ -15,8 +15,9 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use {'nvim-telescope/telescope.nvim', branch = '0.1.x'}
     use {'projekt0n/github-nvim-theme', branch = 'main'}
-    use {'srcery-colors/srcery-vim', as = 'srcery'}
     use 'osyo-manga/vim-brightest'
+    use 'm4xshen/autoclose.nvim'
+    use 'psliwka/vim-smoothie'
     ----------------------------------
     use {
         'nvim-treesitter/nvim-treesitter',

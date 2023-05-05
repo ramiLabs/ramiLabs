@@ -45,8 +45,6 @@ bind("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 
 -- Cursor position sanity
-bind("n", "<C-d>", "<C-d>zz", opts)
-bind("n", "<C-u>", "<C-u>zz", opts)
 bind("n", "n", "nzzzv", opts) -- when searching
 bind("n", "N", "Nzzzv", opts) -- when searching
 
