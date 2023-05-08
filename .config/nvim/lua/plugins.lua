@@ -36,10 +36,6 @@ return require('packer').startup(function(use)
             require('window-picker').setup()
         end,
     }
-    use 'simrat39/symbols-outline.nvim'
-    use {'TimUntersberger/neogit'}
-    use {'sindrets/diffview.nvim'}
-
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
