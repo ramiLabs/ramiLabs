@@ -3,6 +3,7 @@ alias poff='sudo shutdown -h now'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias lg="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
