@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use 'osyo-manga/vim-brightest'
     use 'm4xshen/autoclose.nvim'
     use 'psliwka/vim-smoothie'
+    use 'rebelot/terminal.nvim'
     ----------------------------------
     use {
         'nvim-treesitter/nvim-treesitter',

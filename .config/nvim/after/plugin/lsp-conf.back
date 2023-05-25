@@ -22,7 +22,7 @@ local general_on_attach = function()
     vim.keymap.set("n","<leader>gt", function() vim.lsp.buf.type_definition() end, opts)
     vim.keymap.set("n","<leader>gi", function() vim.lsp.buf.implementation() end, opts)
     vim.keymap.set("n","<leader>gr", function() vim.lsp.buf.references() end, opts)
-    vim.keymap.set("n","<leader>nc", function() vim.lsp.buf.rename() end, opts)
+    vim.keymap.set("n","<leader>rv", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("n","<leader>ca", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n","<leader>gd", function() vim.diagnostic.open_float() end, opts)
 end
