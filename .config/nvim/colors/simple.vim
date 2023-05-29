@@ -12,6 +12,7 @@ let s:black      = ["#1c1c1c", "234"]
 let s:lightblack = ["#262626", "235"]
 let s:darkgray   = ["#444444", "238"]
 let s:gray       = ["#626262", "241"]
+let s:lightgray  = ["#a6a6a6", "241"]
 let s:white      = ["#e4e4e4", "254"]
 let s:violet     = ["#fc33ff", "200"]
 
@@ -20,8 +21,9 @@ let s:green   = ["#87d75f", "113"]
 let s:yellow  = ["#ffd700", "220"]
 let s:blue    = ["#87afd7", "110"]
 let s:magenta = ["#afafd7", "146"]
-let s:cyan    = ["#afd7af", "151"]
+let s:cyan    = ["#2bfafa ", "151"]
 let s:brown   = ["#af875f", "137"]
+let s:orange  = ["#ff7e00", "150"]
 
 function! s:hl(group, attrs) abort
     if has_key(a:attrs, "fg")
@@ -65,16 +67,16 @@ endfunction
 
 let s:constant   = { "fg": s:white }
 let s:identifier = { "fg": s:white }
-let s:special    = { "fg": s:white }
-let s:operator   = { "fg": s:white }
+let s:special    = { "fg": s:blue }
+let s:operator   = { "fg": s:cyan }
 let s:comment    = { "fg": s:brown }
-let s:preproc    = { "fg": s:green }
-let s:keyword    = { "fg": s:red}
-let s:type       = { "fg": s:magenta }
-let s:function   = { "fg": s:yellow }
-let s:literal    = { "fg": s:cyan }
-let s:string     = { "fg": s:cyan }
-let s:char       = { "fg": s:cyan }
+let s:preproc    = { "fg": s:violet }
+let s:keyword    = { "fg": s:yellow}
+let s:type       = { "fg": s:lightgray }
+let s:function   = { "fg": s:lightgray }
+let s:literal    = { "fg": s:green }
+let s:string     = { "fg": s:green }
+let s:char       = { "fg": s:green }
 let s:info       = { "style": "italic" }
 
 " Modes
@@ -162,7 +164,7 @@ call s:hl("GitSignsChange", { "fg": s:blue })
 call s:hl("ModeMsg",        { "style": "bold" })
 call s:hl("MsgSeparator",   { "fg": s:gray })
 call s:hl("ErrorMsg",       { "fg": s:red })
-call s:hl("WarningMsg",     { "fg": s:violet })
+call s:hl("WarningMsg",     { "fg": s:orange })
 call s:hl("MoreMsg",        { "fg": s:green })
 call s:hl("Question",       { "fg": s:green })
 
@@ -178,7 +180,7 @@ call s:hl("FoldColumn",     { "fg": s:brown })
 
 " Diagnostic
 call s:hl("DiagnosticError",{ "fg": s:red })
-call s:hl("DiagnosticWarn", { "fg": s:yellow })
+call s:hl("DiagnosticWarn", { "fg": s:orange })
 call s:hl("DiagnosticInfo", { "fg": s:blue })
 call s:hl("DiagnosticHint", { "fg": s:gray })
 
