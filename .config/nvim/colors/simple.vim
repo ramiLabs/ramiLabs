@@ -15,6 +15,7 @@ let s:gray       = ["#626262", "241"]
 let s:lightgray  = ["#a6a6a6", "241"]
 let s:white      = ["#e4e4e4", "254"]
 let s:violet     = ["#fc33ff", "200"]
+let s:lightblue  = ["#34d2eb", "200"]
 
 let s:red     = ["#ff5f5f", "203"]
 let s:green   = ["#87d75f", "113"]
@@ -68,12 +69,12 @@ endfunction
 let s:constant   = { "fg": s:white }
 let s:identifier = { "fg": s:white }
 let s:special    = { "fg": s:blue }
-let s:operator   = { "fg": s:cyan }
+let s:operator   = { "fg": s:yellow }
 let s:comment    = { "fg": s:brown }
-let s:preproc    = { "fg": s:violet }
-let s:keyword    = { "fg": s:yellow}
-let s:type       = { "fg": s:lightgray }
-let s:function   = { "fg": s:lightgray }
+let s:preproc    = { "fg": s:lightgray }
+let s:keyword    = { "fg": s:yellow, "style": "italic" }
+let s:type       = { "fg": s:lightblue }
+let s:function   = { "fg": s:orange }
 let s:literal    = { "fg": s:green }
 let s:string     = { "fg": s:green }
 let s:char       = { "fg": s:green }
