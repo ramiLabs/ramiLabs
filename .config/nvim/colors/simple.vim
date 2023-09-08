@@ -69,12 +69,12 @@ endfunction
 let s:constant   = { "fg": s:white }
 let s:identifier = { "fg": s:white }
 let s:special    = { "fg": s:blue }
-let s:operator   = { "fg": s:yellow }
+let s:operator   = { "fg": s:red }
 let s:comment    = { "fg": s:brown }
 let s:preproc    = { "fg": s:lightgray }
-let s:keyword    = { "fg": s:yellow, "style": "italic" }
+let s:keyword    = { "fg": s:red, "style": "italic" }
 let s:type       = { "fg": s:lightblue }
-let s:function   = { "fg": s:orange }
+let s:function   = { "fg": s:yellow }
 let s:literal    = { "fg": s:green }
 let s:string     = { "fg": s:green }
 let s:char       = { "fg": s:green }
