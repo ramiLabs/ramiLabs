@@ -37,8 +37,7 @@ local options = {
 
     -- Show white space characters a certain way
     list = true,
-    listchars = { tab = '——→', multispace = '·', trail = '·', nbsp = '␣' },
-    showbreak = '↪ ',
+    --listchars = { tab = '——→', multispace = '·', trail = '·', nbsp = '␣' }, showbreak = '↪ ',
 
     backspace = { 'start', 'eol', 'indent' },
     --  clipboard = "unnamedplus",               -- allows neovim to access the system clipboard

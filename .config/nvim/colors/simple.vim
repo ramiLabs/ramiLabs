@@ -8,21 +8,29 @@ set background=dark
 let g:colors_name = "simpleRami"
 
 " Colors
-let s:black      = ["#1c1c1c", "234"]
+let s:darkblack      = ["#1c1c1c", "234"]
+let s:black      = ["#4b4a49", "234"]
 let s:lightblack = ["#262626", "235"]
 let s:darkgray   = ["#444444", "238"]
 let s:gray       = ["#626262", "241"]
 let s:lightgray  = ["#a6a6a6", "241"]
-let s:white      = ["#e4e4e4", "254"]
+"let s:white      = ["#e4e4e4", "254"]
+let s:white      = ["#eee8d5", "254"]
 let s:violet     = ["#fc33ff", "200"]
 let s:lightblue  = ["#34d2eb", "200"]
 
-let s:red     = ["#ff5f5f", "203"]
-let s:green   = ["#87d75f", "113"]
-let s:yellow  = ["#ffd700", "220"]
+"let s:red     = ["#ff5f5f", "203"]
+let s:red     = ["#c44b18", "203"]
+"let s:green   = ["#87d75f", "113"]
+let s:green   = ["#abc501", "113"]
+let s:pink    = ["#f99cb0", "203"]
+let s:comment_blue = ["#99c0cb", "203"]
+"let s:yellow  = ["#ffd700", "220"]
+let s:yellow  = ["#ecb100", "220"]
 let s:blue    = ["#87afd7", "110"]
 let s:magenta = ["#afafd7", "146"]
-let s:cyan    = ["#2bfafa ", "151"]
+"let s:cyan    = ["#2bfafa ", "151"]
+let s:cyan    = ["#36cfc3 ", "151"]
 let s:brown   = ["#af875f", "137"]
 let s:orange  = ["#ff7e00", "150"]
 
@@ -66,22 +74,22 @@ endfunction
 " Test highlighting with `:source $VIMRUNTIME/syntax/hitest.vim`
 " and `:help group-name`
 
-let s:constant   = { "fg": s:white }
+let s:constant   = { "fg": s:red }
 let s:identifier = { "fg": s:white }
 let s:special    = { "fg": s:blue }
 let s:operator   = { "fg": s:red }
-let s:comment    = { "fg": s:brown }
+let s:comment    = { "fg": s:comment_blue }
 let s:preproc    = { "fg": s:lightgray }
-let s:keyword    = { "fg": s:red, "style": "italic" }
-let s:type       = { "fg": s:lightblue }
+let s:keyword    = { "fg": s:green, "style": "italic" }
+let s:type       = { "fg": s:pink }
 let s:function   = { "fg": s:yellow }
-let s:literal    = { "fg": s:green }
-let s:string     = { "fg": s:green }
-let s:char       = { "fg": s:green }
+let s:literal    = { "fg": s:cyan }
+let s:string     = { "fg": s:cyan }
+let s:char       = { "fg": s:cyan }
 let s:info       = { "style": "italic" }
 
 " Modes
-call s:hl("Normal",         { "fg": s:white, "bg": s:black })
+call s:hl("Normal",         { "fg": s:white, "bg": s:darkblack })
 highlight! link NormalFloat Normal
 highlight! link NormalNC    Normal
 highlight! link MsgArea     Normal
@@ -124,12 +132,12 @@ highlight! link CursorColumn CursorLine
 call s:hl("CursorLineNr",   { "style": "bold" })
 
 " Line numbers
-call s:hl("LineNr",         { "fg": s:gray })
+call s:hl("LineNr",         { "fg": s:comment_blue })
 call s:hl("SignColumn",     { "bg": s:black })
 
 " Status line
-call s:hl("StatusLine",     { "fg": s:white, "bg": s:lightblack })
-call s:hl("StatusLineNC",   { "fg": s:gray, "bg": s:lightblack })
+call s:hl("StatusLine",     { "fg": s:darkblack, "bg": s:lightblack })
+call s:hl("StatusLineNC",   { "fg": s:darkblack, "bg": s:lightblack })
 
 " Search
 call s:hl("Search",         { "fg": s:white, "bg": s:gray })
