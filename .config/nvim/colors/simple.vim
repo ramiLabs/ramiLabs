@@ -8,8 +8,7 @@ set background=dark
 let g:colors_name = "simpleRami"
 
 " Colors
-let s:darkblack      = ["#1c1c1c", "234"]
-let s:black      = ["#4b4a49", "234"]
+let s:black      = ["#1c1c1c", "234"]
 let s:lightblack = ["#262626", "235"]
 let s:darkgray   = ["#444444", "238"]
 let s:gray       = ["#626262", "241"]
@@ -27,7 +26,7 @@ let s:pink    = ["#f99cb0", "203"]
 let s:comment_blue = ["#99c0cb", "203"]
 "let s:yellow  = ["#ffd700", "220"]
 let s:yellow  = ["#ecb100", "220"]
-let s:blue    = ["#87afd7", "110"]
+let s:blue    = ["#87afd7", "203"]
 let s:magenta = ["#afafd7", "146"]
 "let s:cyan    = ["#2bfafa ", "151"]
 let s:cyan    = ["#36cfc3 ", "151"]
@@ -89,7 +88,7 @@ let s:char       = { "fg": s:cyan }
 let s:info       = { "style": "italic" }
 
 " Modes
-call s:hl("Normal",         { "fg": s:white, "bg": s:darkblack })
+call s:hl("Normal",         { "fg": s:white, "bg": s:black })
 highlight! link NormalFloat Normal
 highlight! link NormalNC    Normal
 highlight! link MsgArea     Normal
@@ -136,8 +135,8 @@ call s:hl("LineNr",         { "fg": s:comment_blue })
 call s:hl("SignColumn",     { "bg": s:black })
 
 " Status line
-call s:hl("StatusLine",     { "fg": s:darkblack, "bg": s:lightblack })
-call s:hl("StatusLineNC",   { "fg": s:darkblack, "bg": s:lightblack })
+call s:hl("StatusLine",     { "fg": s:comment_blue, "bg": s:lightblack })
+call s:hl("StatusLineNC",   { "fg": s:comment_blue, "bg": s:lightblack })
 
 " Search
 call s:hl("Search",         { "fg": s:white, "bg": s:gray })
